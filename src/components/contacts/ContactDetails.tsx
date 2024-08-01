@@ -1,6 +1,6 @@
 // src/components/ContactDetails.tsx
 import React from 'react';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import { Contact } from '../../interfaces/Contact';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const ContactDetails: React.FC<Props> = ({ contact }) => {
-  const { id } = useParams();
+  // const { id } = useParams();
 
   return (
     <div className="flex flex-col">
