@@ -19,7 +19,7 @@ const ContactList: React.FC<Props> = ({ contacts }) => {
       <ul>
         {contacts?.map((contact) => (
           <li key={contact.id}>
-            <Link to={`/contacts/${contact.id}`}>{contact.name}</Link>
+            <Link to={`/contacts/${contact.id}`}>{contact.firstname}</Link>
           </li>
         ))}
       </ul>

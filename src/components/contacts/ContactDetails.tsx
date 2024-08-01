@@ -13,10 +13,10 @@ const ContactDetails: React.FC<Props> = ({ contact }) => {
   return (
     <div className="flex flex-col">
       <h2 className="text-lg font-bold mb-4">Contact Details</h2>
-      <p className="text-lg font-bold mb-2">Name:</p>
-      <p className="text-lg mb-4">{contact.name}</p>
-      <p className="text-lg font-bold mb-2">Email:</p>
-      <p className="text-lg mb-4">{contact.email}</p>
+      <p className="text-lg font-bold mb-2">First Name:</p>
+      <p className="text-lg mb-4">{contact.firstname}</p>
+      <p className="text-lg font-bold mb-2">Last Name:</p>
+      <p className="text-lg mb-4">{contact.lastname}</p>
       <p className="text-lg font-bold mb-2">Phone:</p>
       <p className="text-lg mb-4">{contact.phone}</p>
     </div>
