@@ -1,17 +1,17 @@
+import GraphComponent from "../components/graph/GraphComponent";
 import Sidebar from "../components/sidebar/Sidebar";
-import ContactList from "../components/contacts/ContactList";
 
-const Home = () => {
+const Graph = () => {
   return (
     <div className="w-[100%] flex h-screen">
       <div className="w-[18%]">
         <Sidebar />
       </div>
       <div className="w-full">
-        <ContactList contacts={[]} />
+        <GraphComponent  />
       </div>
     </div>
   );
 };
 
-export default Home;
+export default Graph;

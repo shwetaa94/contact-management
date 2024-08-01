@@ -1,7 +1,7 @@
 // src/components/ContactDetails.tsx
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Contact } from '../interfaces/Contact';
+import { Contact } from '../../interfaces/Contact';
 
 interface Props {
   contact: Contact;

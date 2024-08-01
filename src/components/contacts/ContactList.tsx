@@ -1,7 +1,7 @@
 // src/components/ContactList.tsx
 import React from "react";
 import { Link } from "react-router-dom";
-import { Contact } from "../interfaces/Contact";
+import { Contact } from "../../interfaces/Contact";
 
 interface Props {
   contacts: Contact[];
@@ -22,7 +22,6 @@ const ContactList: React.FC<Props> = ({ contacts }) => {
             <Link to={`/contacts/${contact.id}`}>{contact.name}</Link>
           </li>
         ))}
-     
       </ul>
     </div>
   );
