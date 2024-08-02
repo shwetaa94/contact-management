@@ -55,25 +55,21 @@ my-contact-app/
 ├── public/
 ├── src/
 │   ├── components/
-│   │   ├── ContactForm.tsx
+│   │   ├── ContactCard.tsx
 │   │   ├── ContactList.tsx
-│   │   ├── ContactDetails.tsx
-│   │   ├── ContactEditForm.tsx
-│   │   ├── Dashboard.tsx
+│   │   ├── CovidCase.tsx
 │   │   ├── LineChart.tsx
 │   │   ├── Map.tsx
 │   ├── pages/
 │   │   ├── Home.tsx
 │   │   ├── Contacts.tsx
-│   │   ├── ContactDetailPage.tsx
-│   │   ├── DashboardPage.tsx
-│   ├── redux/
+│   │   ├── Graph.tsx
+│   ├── store/
 │   │   ├── store.ts
 │   │   ├── contactsSlice.ts
-│   ├── services/
-│   │   ├── api.ts
 │   ├── App.tsx
 │   ├── index.tsx
+│   ├── layout.tsx
 ├── package.json
 ├── tailwind.config.js
 └── tsconfig.json
