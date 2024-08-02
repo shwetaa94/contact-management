@@ -51,19 +51,16 @@ const ChartsAndMaps = () => {
   }
 
   return (
-    <div className="border-box relative my-20 flex w-full flex-1 flex-col items-center gap-20 px-4 md:px-10 ">
+    <div className="h-screen overflow-y-scroll bg-blue-100 border-box relative  flex w-full flex-1 flex-col items-center gap-20 px-4 md:px-10 ">
       {/* render worldWide data if the data has been fetched */}
       {worldWideData && (
-        <div className="flex w-full flex-col items-center gap-4 rounded-lg py-5 shadow-lg ">
+        <div className="bg-white flex w-full flex-col items-center gap-4 rounded-lg py-5 shadow-lg ">
           <h1 className="text-2xl font-semibold">Worldwide cases</h1>
           <div className="grid w-full grid-cols-1 gap-4 p-4 sm:grid-cols-2 lg:grid-cols-4 ">
             <CovidCase title="total cases" numbers={worldWideData.cases} />
             <CovidCase title="active" numbers={worldWideData.active} />
             <CovidCase title="deaths" numbers={worldWideData.deaths} />
-            <CovidCase
-              title="recovered"
-              numbers={worldWideData.recovered}
-            />
+            <CovidCase title="recovered" numbers={worldWideData.recovered} />
           </div>
         </div>
       )}

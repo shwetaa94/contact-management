@@ -23,7 +23,7 @@ const determineColor = (title: string): string => {
 // Functional component to display a dashboard card
 const CovidCase: React.FC<CovidCaseProps> = ({ title, numbers }) => {
   return (
-    <div className="flex flex-col gap-4 rounded-lg bg-blue-50 p-4 shadow-md transition-all delay-150 duration-300 ease-in-out hover:scale-110 hover:cursor-pointer">
+    <div className="bg-blue-100 flex flex-col gap-4 rounded-lg  p-4 shadow-md transition-all delay-150 duration-300 ease-in-out hover:scale-110 hover:cursor-pointer">
       {/* Display the title with capitalized first letter */}
       <div className="text-xl font-semibold capitalize">{title}</div>
       {/* Display the numbers with appropriate color based on the title */}

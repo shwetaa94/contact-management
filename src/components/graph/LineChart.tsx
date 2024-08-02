@@ -19,7 +19,7 @@ ChartJs.register(
   LinearScale,
   PointElement,
   Legend,
-  Tooltip,
+  Tooltip
 );
 
 interface LineChartProps {
@@ -30,10 +30,10 @@ const LineChart: React.FC<LineChartProps> = ({ covidData }) => {
   const dates: string[] = Object.keys(covidData.cases).map((key) => key);
   const cases: number[] = Object.values(covidData.cases).map((value) => value);
   const deaths: number[] = Object.values(covidData.deaths).map(
-    (value) => value,
+    (value) => value
   );
   const recovered: number[] = Object.values(covidData.recovered).map(
-    (value) => value,
+    (value) => value
   );
 
   const data: ChartData<"line"> = {
@@ -94,7 +94,7 @@ const LineChart: React.FC<LineChartProps> = ({ covidData }) => {
   };
 
   return (
-    <div className="relative flex w-full flex-col items-center gap-5 rounded-lg shadow-xl">
+    <div className="bg-white relative flex w-full flex-col items-center gap-5 rounded-lg shadow-xl">
       <h1 className="text-2xl font-semibold">Covid cases flactuations</h1>
       <div className="flex w-full justify-center p-4">
         <Line

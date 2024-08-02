@@ -5,9 +5,7 @@
 This is a contact management application built using ReactJS, TypeScript, TailwindCSS, React Router v6, and React Query. The app allows users to add, view, edit, and delete contacts. It also includes a dashboard with a line graph and a map showing COVID-19 data using external APIs.
 
 
-## Deployed Link
-
-      https://contact-manager-delta-five.vercel.app/
+## Deployed Link:  https://contact-manager-delta-five.vercel.app/
 
 ## Features
 
