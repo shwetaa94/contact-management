@@ -3,8 +3,7 @@ export interface Contact {
     id: number;
     firstname: string;
     lastname: string;
-    phone: number;
-    status: string;
+    status: "ACTIVE" | "INACTIVE";
   }
   export interface ContactState{
     Contacts :Contact[]

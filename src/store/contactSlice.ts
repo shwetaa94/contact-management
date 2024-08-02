@@ -1,50 +1,49 @@
-import { createSlice } from '@reduxjs/toolkit';
-import type { PayloadAction } from '@reduxjs/toolkit';
-
-import { Contact, ContactState } from '../interfaces/Contact';
-
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Contact, ContactState } from "../interfaces/Contact";
+import { RootState } from "./store";
 
 const demoContacts: Contact[] = [
-
   {
     id: 1,
     firstname: "shweta",
     lastname: "singh",
-    phone: 1234567890,
-    status:"ACTIVE"
-
+    status: "ACTIVE",
   },
-
 ];
 
 const initialState: ContactState = {
   Contacts: demoContacts,
 };
 
-export const contactSlice = createSlice({
-  name: 'contact',
+const contactSlice = createSlice({
+  name: "contacts",
   initialState,
   reducers: {
     addContact: (state, action: PayloadAction<Contact>) => {
       state.Contacts.push(action.payload);
     },
-    deleteContact: (state, action: PayloadAction<Contact>) => {
-      state.Contacts = state.Contacts.filter(
-        (contact) => contact.id !== action.payload.id
-      );
-    },
     editContact: (state, action: PayloadAction<Contact>) => {
-      const editedContact = action.payload;
-      const index = state.Contacts.findIndex(
-        (contact) => contact.id === editedContact.id
+      const { id, ...updatedContact } = action.payload;
+      const existingContact = state.Contacts.find(
+        (contact) => contact.id === id
       );
-      if (index !== -1) {
-        state.Contacts[index] = editedContact;
+      if (existingContact) {
+        Object.assign(existingContact, updatedContact);
       }
+    },
+    deleteContact: (state, action: PayloadAction<number>) => {
+      state.Contacts = state.Contacts.filter(
+        (contact) => contact.id !== action.payload
+      );
     },
   },
 });
 
-export const { addContact, deleteContact, editContact } = contactSlice.actions;
+// Export actions
+export const { addContact, editContact, deleteContact } = contactSlice.actions;
 
+// Export selector
+export const selectContacts = (state: RootState) => state.contact.Contacts;
+
+// Export reducer
 export default contactSlice.reducer;

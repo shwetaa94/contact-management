@@ -8,7 +8,7 @@ const Home = () => {
         <Sidebar />
       </div>
       <div className="w-full">
-        <ContactList contacts={[]} />
+        <ContactList />
       </div>
     </div>
   );
