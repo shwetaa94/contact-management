@@ -40,22 +40,25 @@ const ContactList: React.FC = () => {
                   )}
                   {contact.status}
                 </div>
-                <div className="mt-10 flex flex-col gap-5">
+                <div className="w-full mt-10 flex justify-between">
                   <Link
                     to={`/create?id=${contact.id}&firstname=${contact.firstname}&lastname=${contact.lastname}&status=${contact.status}`}
-                    className="inline-flex items-center justify-center rounded-md bg-blue-400 py-2 text-white hover:bg-blue-500"
+                    className="flex items-center justify-center rounded-md bg-blue-400 py-2 text-white hover:bg-blue-500"
                   >
-                    <button type="button" className="flex font-semibold">
-                      <MdEdit className="mr-2 h-5 w-5" />
+                    <button
+                      type="button"
+                      className="w-20 px-2 flex font-semibold"
+                    >
+                      <MdEdit className="mr-2 h-5" />
                       Edit
                     </button>
                   </Link>
                   <button
                     type="button"
-                    className="inline-flex items-center justify-center rounded-md bg-red-600 py-2 text-sm font-semibold text-white hover:bg-red-500"
+                    className="w-20 p-2 flex items-center justify-center rounded-md bg-red-600 py-2 text-sm font-semibold text-white hover:bg-red-500"
                     onClick={() => handleDeleteContact(contact.id)}
                   >
-                    <MdDelete className="mr-2 h-5 w-5" />
+                    <MdDelete className="mr-2 h-5 " />
                     Delete
                   </button>
                 </div>
